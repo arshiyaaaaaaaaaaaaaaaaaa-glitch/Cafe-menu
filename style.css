@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+
+:root {
+  --dark-green: #064420;
+  --light-green: #e8f5e9;
+}
+
+body {
+  margin: 0;
+  font-family: 'Vazirmatn', sans-serif;
+  background: radial-gradient(circle at random, var(--light-green), var(--dark-green));
+  background-size: cover;
+  min-height: 100vh;
+  color: #222;
+  direction: rtl;
+}
+
+/* نوار بالا */
+header {
+  background-color: var(--dark-green);
+  color: white;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  font-weight: bold;
+}
+
+.logo {
+  font-size: 20px;
+}
+
+.phone-icon {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* پنل کشویی */
+#sidePanel {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 280px;
+  height: 100vh;
+  background-color: var(--dark-green);
+  color: white;
+  box-shadow: 3px 0 8px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#sidePanel.open {
+  left: 0;
+}
+
+.panel-content h2 {
+  margin-top: 0;
+}
+
+.footer-text {
+  font-size: 12px;
+  color: #ccc;
+  text-align: center;
+}
+
+/* دکمه‌ها */
+.menu-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 100px;
+}
+
+.menu-btn {
+  background-color: var(--dark-green);
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  width: 200px;
+  text-align: center;
+}
+
+.menu-btn:hover {
+  background-color: #046d36;
+}
+
+/* لیست منو */
+.menu-list {
+  margin-top: 30px;
+  width: 90%;
+  max-width: 500px;
+  margin-inline: auto;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #000;
+}
